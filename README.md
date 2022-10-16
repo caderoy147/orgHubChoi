@@ -1,2 +1,3 @@
 # orgHubChoi
 mga idol
+PLEASE KO ADD OG CSS NAA NA TANA FUNCTIONSS
