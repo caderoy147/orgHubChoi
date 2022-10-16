@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Event Details.</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/eventDetails.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="wrapper">
+        <div class="nav">
+            
+        
+            <div class="navElements">
+                
+                <a id="iconNavAccountProfileBack" href="dashboard.html"><i class="fa-solid fa-chevron-left"></i></a>
+                
+                <div class="organizeButton">
+                    <button type="button">Be an organizer</button>
+                </div> 
+
+                <div class="dropdown">
+                    <button class="dropbtn"><a><i class="fa-solid fa-circle-user"></i></a></button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div>
+
+
+            </div>
+            
+
+        </div>
+
+        <div class = "organizer">
+            <h3>Event Details</h3>
+          <hr color=" #FF7A7B">
+        </div>
+      
+
+
+     <div id="formWrapper">
+            <!--Leftside entries-->
+            <form class="leftSideEntities">
+                <!--Event date-->
+                <label for = "eventDate">Event Date</label>
+                <input type = "date" id = "eventDate" name = "eventDate" value="{{ note.eventDate }}" readonly>
+                <br>
+                <!--Event Name-->
+                <label for = "eventName">Event Name</label>
+                <input type = "text" id = "eventName" name = "eventName" value="{{ note.eventName }}" readonly>
+                <br>
+                <!--Rationale-->
+                <label for ="rationale">Rationale</label>
+                <textarea name="rationale" id="rationale" cols="30" rows="10"  value="{{ note.rationale }}" readonly>{{ note.rationale }}</textarea>
+                
+            </form>
+           
+            <!--Rightside entries-->
+            <form class="rightSideEntities" method="post">
+                <!--Organization Name-->
+                <label for = "deadline">Registration deadline</label>
+                <input type = "date" id = "deadline" name = "deadline" value="{{ note.deadline }}" readonly>
+                <br>
+                <!--Event Name-->
+                <label for = "participants">Number of participants needed</label>
+                <input type = "number" id = "participants" name = "participants" value="{{ note.participants }}" readonly>
+                <br>
+                <!--Progress bar-->
+                <label for="noVolunteers">Voluteers needed:</label>
+                <progress id="noVolunteers" value="32" max="100" value="{{ note.participants }}" readonly></progress>
+                <br>
+
+                <!--Organize now button-->
+                <a href="./verify.html"> <button type="submit">Participate now!</button> </a>
+                
+             </form>
+            
+     </div>
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,365 @@
+/*NAV*/
+
+.nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-align: right;
+    list-style: none;
+    display: inline-block;
+    padding:  8px 12px;
+    position: relative; 
+    text-decoration: none;
+}
+
+.nav .links a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav .links a:hover::after{
+    width:100%;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+/*PROFILE*/
+* {
+    box-sizing: border-box;
+  }
+  body{
+    background-color: white;
+    font-family: 'Inter';
+  }
+   /* Assign full width inputs*/ 
+   input[type=text] { 
+       width: 80%;
+       padding: 20px 40px;
+       font-size: large;
+       margin: 50px 0;
+       margin-left: 10%;
+       margin-bottom: 0%;
+       box-sizing: border-box; 
+   }
+   #name{
+  margin-top: 0%;
+   }
+  /*profile css main*/
+  .navBar
+  {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width:100%;
+  margin-top: 0;
+  border-top: 0;
+  height: 60px;
+  }
+  .navBar i
+  {
+    padding-top: 1%;
+    font-size:200%;
+    color: #FF7A7B;
+  }
+  #iconNavAccountProfile
+  {
+    margin-left: 93%;
+  }
+  #iconNavAccountProfileBack
+  {
+    margin-left: 1%;
+  }
+  .profileUpperElement
+  {
+    margin:auto;
+    margin-top: 2%;
+    color: rgba(0, 0, 0, 0.25);
+    width: 90%;
+    height: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body{
+    background-color: white;
+    font-family: 'Inter';
+  }
+   /* Assign full width inputs*/ 
+   input[type=text] { 
+       width: 80%;
+       padding: 20px 40px;
+       font-size: large;
+       margin-left: 10%;
+       margin-bottom: 0%;
+       box-sizing: border-box; 
+   }
+   #name{
+  margin-top: 0%;
+   }
+  /*profile css main*/
+  .navBar
+  {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width:100%;
+  margin-top: 0;
+  border-top: 0;
+  height: 60px;
+  }
+  .navBar i
+  {
+    padding-top: 1%;
+    font-size:200%;
+    color: #FF7A7B;
+  }
+  #iconNavAccountProfile
+  {
+    margin-left: 93%;
+  }
+  #iconNavAccountProfileBack
+  {
+    margin-left: 1%;
+  }
+  .profileUpperElement
+  {
+    margin:auto;
+    margin-top: 15%;
+    color: rgba(0, 0, 0, 0.25);
+    width: 90%;
+    height: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+  }
+  .profileUpperElement img 
+  {
+    position:absolute;
+    left: 43%;
+    bottom: 50%;
+    width: 15%;
+    height: 25%;
+  }
+  .userCurrent
+  {
+    margin-right: 7%;
+    text-align: center;
+  }
+  #profileUpperElementEmail input
+  {
+    text-align: center;
+    height: 10px;
+    border: none;
+    
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-weight: 200;
+    font-size:200%;
+    box-shadow: none;
+  }
+  #AccountProfile
+  {
+    padding-top: 1%;
+    text-align: center;
+  }
+  #profileLowerElement
+  {
+    margin:auto;
+    padding-top: 2%;
+    padding-bottom: 7%;
+    margin-top: 0%;
+    color: rgba(0, 0, 0, 0.25);
+   width: 90%;
+   height: 100px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  #profileLowerElement > .eventsOrganized{
+    float: left;
+    width: 50%; 
+    height: 100px;
+  }
+  #profileLowerElement > .eventsJoined
+  {
+    width: 50%; 
+    height: 100px;
+    float:left;
+  }
+  #profileLowerElement input{
+    display:block;
+    margin: auto;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-weight: 500;
+    font-size:150%;
+    padding-bottom: 1%;
+  
+  color: #000000;
+  }
+  #profileLowerElement label{
+    display:block;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size:150%;
+  
+  color: #000000;
+  }
+  
+  body{
+    margin:0%;
+  }
+
+    /*organizebutton*/
+    .navElements .organizeButton{
+      margin-left: 80%;
+      border: none;
+      }
+      
+      .navElements .organizeButton button{
+      color: black;
+      background-color: white;
+      border-color: #FF7A7B;
+      padding: 7px 12px; 
+      margin: 2px 0; 
+      cursor: pointer; 
+      width: 100%;
+      margin-left: 15%;
+      border-radius: 15%;
+      font-weight:600;
+      font-size:40%;
+      border-radius: 10px;
+      margin-bottom: 10%;
+      }
+    
+    
+      .navElements
+      {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 2%;
+        align-items: center;
+        background-color: none;
+        color: #FF7A7B;
+        font-size:200%;
+      }
+ 
+  /*dropdown icon* w3resource ra ni/
+  
+  /* Style The Dropdown Button */
+  .dropbtn {
+    color: #FF7A7B;
+    background-color: white;
+    padding: 16px;
+    font-size: 110%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+    /* Icon */
+  .dropdown img{
+    width: 130%;
+    height: 35px;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: -35%;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 50%;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color:#D9D9D9;
+  }
+  
+  /*organizebutton*/
+  .navElements .organizeButton{
+  margin-left: 80%;
+  border: none;
+  }
+  
+  .navElements .organizeButton button{
+  color: black;
+  background-color: white;
+  border-color: #FF7A7B;
+  padding: 7px 12px; 
+  margin: 2px 0; 
+  cursor: pointer; 
+  width: 100%;
+  margin-left: 9%;
+  border-radius: 15%;
+  font-weight:600;
+  font-size:40%;
+  border-radius: 10px;
+  margin-bottom: 10%;
+  }
+

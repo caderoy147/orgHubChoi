@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ </head>
+ <body>
+
+<h3><a href="{{ url_for('views.show') }}">Comments - Flask SQLAlchemy
+example</a></h3>
+ <hr/>
+ {%- for message in get_flashed_messages() %}
+  {{ message }}
+ {%- endfor %}
+
+  <table >
+    <tbody >
+    {% for notes in notes|batch(3) %}
+     
+    <tr>
+      {% for note in notes %}
+        
+        <td>
+        <div class="card">
+
+        <div class="name">
+        <textarea name="rationale" id="rationale" cols="10" rows="5">{{ note.orgName }}</textarea>
+        </div>
+
+
+        <div class="tumbnail">
+
+        </div>
+
+        <div class="details">
+        <form class="entries">
+        <!--Event date-->
+
+        <i class="fa-solid fa-calendar-days"></i>
+        <input type = "date" id = "eventDate" name = "eventDate" placeholder="Event Date" readonly>
+        <br>
+        <!--Event Name-->
+        <i class="fa-solid fa-calendar-days"></i>
+        <input type = "date" id = "deadline" name = "deadline" placeholder="Registration Deadline" readonly>
+        <br>
+        <!--volunteers required-->
+        <i class="fa-solid fa-person"></i>
+        <input type = "number" id = "noVolunteers" name = "noVolunteers" placeholder="Volunteers required"readonly>
+        <br>
+
+        <a href="./verify.html"> <button type="submit">Participate!</button> </a>
+        </form>
+        </div>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+ </body>
+</html>

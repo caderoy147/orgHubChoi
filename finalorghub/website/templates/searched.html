@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/dashboard.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/card.css') }}">
+<title>OrgHub</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+  <div>
+    <a href="{{ url_for('views.dashboard') }}">return</a>
+  </div>
+        
+  <table class="cardWrapper">
+    
+    <tbody class="context">
+    {% for notes in notes|batch(3) %}
+     
+    <tr>
+      {% for note in notes %}
+        
+        <td>
+        <div class="card">
+
+        <div class="name">
+        <textarea name="rationale" id="rationale" cols="10" rows="5">{{ note.orgName }}</textarea>
+        </div>
+
+
+        <div class="tumbnail">
+
+        </div>
+
+        <div class="details">
+        <form class="entries">
+        <!--Event date-->
+
+        <img src="{{ url_for('static',filename='images/calendarIcon.png') }}" alt="calendarIcon">
+        <input type = "date" id = "eventDate" name = "eventDate" placeholder="Event Date" value="{{ note.eventDate }}" readonly>
+        <br>
+        <!--Event Name-->
+        <img src="{{ url_for('static',filename='images/calendarIcon.png') }}" alt="calendarIcon">
+        <input type = "date" id = "deadline" name = "deadline" placeholder="Registration Deadline" value="{{ note.deadline }}" readonly>
+        <br>
+        <!--volunteers required-->
+        <img src="{{ url_for('static',filename='images/humanIcon.png') }}" alt="humanIcon">
+        <input type = "number" id = "noVolunteers" name = "noVolunteers" placeholder="Volunteers required" value="{{ note.participants }}"readonly>
+        <br>
+       </form>
+        <a href="{{ url_for('views.details', note=note.id) }}"> <button type="submit">Participate!</button> </a>
+        
+        </div>
+        </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+
+        
+
+    </div>
+    <h1>{{ string }}</h1>
+    <div class="footer">
+        <h2>Orghub.</h2>
+        <div class="footerlinks">
+            <a href="#">Help</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+  

@@ -1,0 +1,85 @@
+.context .card
+{
+  background-color: #F5F0F0;
+  width: 380px;
+  height: 390px;
+  border: 1px #ccc;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+ border-radius: 30px;
+ margin: auto;
+}
+.context .tumbnail
+{
+  background-color: rgba(217, 217, 217, 1);
+  width: 100%;
+  height: 125px;
+  margin-top: 0%;
+}
+
+.context .name{
+padding-top: 3%;
+font-size: 150%;
+margin-bottom: 0%;
+padding-bottom: 0%;
+padding-left: 5%;
+border-color: transparent;
+}
+.context textarea
+{
+  width: 80%;
+  height: 35px;
+  margin-top: 1%;
+  display: inline-block;
+  border: 1px #F5F0F0;
+  box-sizing: border-box;
+ text-align: left;
+ font-size: 80%;
+ background-color: #F5F0F0;
+ outline:none;
+ resize: none;
+ overflow:hidden
+}
+.context input[type=date],input[type=number]{
+  width: 55%;
+  height: 35px;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  border-radius: 35%;
+  display: inline-block;
+  border: 1px #ccc;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+ border-radius: 30px;
+ text-indent: 10%;
+ text-align:center;
+ outline:none;
+}
+.context button
+{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: rgba(255, 122, 123, 1);
+  color: white;
+  display: inline-block;
+  border: 1px #ccc;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+ border-radius: 30px;
+ text-align: center;
+ height: 30px;
+ width: 35%;
+}
+.context .details
+{
+  text-align: center;
+}
+.context img{
+  position:relative;
+  left: 20%;
+  color: rgba(255, 122, 123, 1);
+  width: 5%;
+  top: 5px; 
+}
+/*====================================================*/

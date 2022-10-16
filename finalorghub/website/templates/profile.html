@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Orghub | Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/profile.css') }}">
+    
+{% endblock %}
+{% block body %}
+<div class="nav">
+            
+        
+    <div class="navElements">
+        
+        <a id="iconNavAccountProfileBack" href="{{ url_for('views.dashboard') }}"><img src="{{ url_for('static',filename='images/backicon.png') }}" alt="returnIcon"></a>
+        <!--Dashboard return-->
+        
+        <div class="organizeButton">
+            <button type="button">Be an organizer</button>
+        </div> 
+
+        <div class="dropdown">
+            <button class="dropbtn"><a><img src="{{ url_for('static',filename='images/user.png') }}" alt="returnIcon"></a></button>
+            <div class="dropdown-content">
+            <a href="{{ url_for('auth.logout') }}">Log out</a>
+            </div>
+        </div>
+
+
+    </div>
+    
+</div>
+
+<div class = "organizer">
+    <h3>Be an organizer</h3>
+  <hr color=" #FF7A7B">
+</div>
+
+</div>
+
+    <header id="AccountProfile">
+    <h1>Account Profile</h1>
+    </header>
+    
+    
+    <div class="profileUpperElement">
+        
+        <a><img src="{{ url_for('static',filename='images/user.png') }}" alt="returnIcon"></a>
+        
+    
+        <div class="userCurrent">
+        <!--EMAIL-->
+            <div id="profileUpperElementEmail">
+            <input type="text" placeholder="" name="ename" value = "{{ user.name }}" readonly> 
+            <!--NAME jinga Name:current_user.userName--> 
+            </div>
+    
+        <!--NAME-->
+
+            <div id="profileUpperElementEmail">
+            <input type="text"  name="ename" value = "{{ user.email }}" readonly >  
+            <!--NAME jinga Email: current_user.email--> 
+            </div>
+        </div>
+ </div>
+
+    <!--Need niya og css--> 
+    {% for notes in notes %}
+        <div id="profileLowerElement">
+        <h1>{{ notes.orgName }}</h1>
+        <h2>{{ notes.deadline }}</h2>   
+        <h3>{{ notes.eventName }}</h3>
+        <form action="{{ url_for('views.delete',note=notes.id) }}" method="post">
+           <button>Delete</button>
+        </form>
+    {% endfor%}
+
+
+{% endblock %}

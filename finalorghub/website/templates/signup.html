@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/loginform.css') }}">
+  <title>Sign up</title>
+{% endblock %}
+
+{% block body %}
+<div class = "nav">
+  
+  <div id="box">
+    
+      <div class="box1">
+
+
+        <header id="leftHeadSignUp">
+        <h1>Hello, Friend!</h1>
+         </header>
+
+
+         <form class="container1" method="POST"> 
+
+          <div class="fontuser">
+              <input type="text" placeholder="Name" name="name" id="name" value="" required> 
+              <a><img src="{{ url_for('static', filename='images/user.png') }}" alt="SignupUserIcon" /></a>
+          </div>
+
+          <div class="fontemail">
+                <input value=""type="email" class="form-control"name="email" id="email" placeholder="Enter email"/> 
+              <a><img src="{{ url_for('static', filename='images/emailicon.png') }}" alt="SignupEmailIcon" /></a>
+          </div>
+            
+          <div class="fontpassword">
+              <input type="password" placeholder="Password" name="password" id="password" value="" required> 
+              <a><img src="{{ url_for('static', filename='images/passwordicon.png') }}" alt="SignupPasswordIcon" /></a>
+          </div>     
+            
+           <input type="submit" value="Create Account" class="signupCreate" />
+
+      </form>
+
+        <!-- </form>-->
+
+        <div class="createAccount">
+        <p>Already have an account?<a href="{{ url_for('auth.login') }}">Sign in</a></p>
+        <!--url_for('forms.SignInPage')-->
+
+      </div>
+
+      </div>
+    
+      <div class="box2">
+        <header id="righthead">
+        <h1>Glad you're here!</h1>
+      </header>
+        <div class=container1>
+        <p>We are delighted to have you here! Orghub was founded because we wanted to make a modern website that encourages individuals to take part in activities that are important to them. </p>
+        </div>
+      </div>
+
+    </div>
+  <!--<a href="#"><i class="fa-solid fa-envelope"></i></a>-->
+{% endblock %}
